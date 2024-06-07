@@ -5,7 +5,7 @@ function registrarAluno(e) {
     const nota1 = parseFloat(document.getElementById('nota1').value);
     const nota2 = parseFloat(document.getElementById('nota2').value);
     const media = (nota1 + nota2) / 2;
-    const situacao = media >= 5 ? "Aprovado" : "Reprovado";
+    const situacao = media > 5 ? "Aprovado" : "Reprovado";
     const linha = criarLinhaTabela(nome, matricula, nota1, nota2, media, situacao);
     adicionarLinhaTabela(linha);
     limparCamposFormulario();
